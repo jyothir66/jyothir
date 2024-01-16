@@ -1,0 +1,233 @@
+<html>
+
+    <head>
+
+        <title>Pages</title>
+
+        <link rel="stylesheet" href="html.css">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+       <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+       <link rel="stylesheet" media="all and (max-width:480px)" href="html.css">
+
+       
+
+    </head>
+
+    <body>
+     
+         
+        <p class="a">level. A compromise between discretization and use of continuous distributions is <br>
+            A compromise between discretization and use of continuous distributions is association <br>
+            between a categorical and a continuous variable one would thus investigate the ranks of <br>
+            the continuous variable, which are uniformly distributed over their range for every <br>
+            category if there is no association. Using a model where the ranks are non- uniformly <br>
+            distributed (e.g., with a linearly varying density), we can build the system of model <br>
+            comparisons of the model choice section. The difficulty is that the nuisance parameters <br>
+            cannot be analytically integrated out, so a numerical or MCMC quadrature procedure<br> 
+            must be used.</p>
+           <p> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;A review of distributions used by statisticians and their parameter estimation<br> methods is found in Chapter 11.</p>
+       <p><b> <h3 >  Missing Values in Data Matrix</b></p></h3><br>
+       <p class="a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data collected from experiments are seldom perfect. The problem of missing and <br>
+        erroneous data is a vast field in the statistics literature. First of all, there is a possibility <br>
+        that “missingness” of data values are significant for the analysis, in which case <br>
+        missingness should be modeled as an ordinary data value. Then the problem has been <br>
+        internalized, and the analysis can proceed as usual, with the important difference being <br>
+        that the missing values are not available for analysis. A more skeptical approach was<br>
+         developed by Ramoni and Sebastiani(1998), who consider an option to regard the missing <br>
+         values as adversaries (the conclusions on dependence structure would then be true, no <br>
+         matter what the missing values are – but with lots of missing data, conclusions will<br>
+          become very weak). A third possibility is that missingness is known to have nothing to<br>
+          do with the objectives of the analysis – data are missing completely at random. For<br>
+           example, in a medical application, if data is missing because of the bad condition of the<br> patient, missingness is significant if the investigation is concerned with patients. But if <br>data is missing because of unavailability of equipment, it is probably not - unless maybe<br>
+            if the investigation is related to hospital quality. </p>
+            <p class="a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Assuming that data is missing completely at random, it is relatively easy to get an<br>
+                 adequate analysis. It is not necessary to waste entire cases just because they have a<br>
+                  missing item. Most of the analyses made refer only to a small number of columns, and <br>
+                  these columns can be compared for all cases that have no missing data in these particular<br>
+                  columns. In this way it is, for example, possible to make a graphical model for a data set<br>
+                   even if every case has some missing item, since all computations of the graphical model<br>
+                    choice section refer to a small number of columns. In this situation, it is even possible <br>
+                    to impute the values missing, because the graphical model obtained shows which<br>
+                     variables most influence the missing one. So every missing value for a variable can be<br>
+                      predicted from values of the case for neighbors of the variable in the graph of the model.<br>
+                       When this is done, one must always remember that the value is a guess. It can thus never<br>
+                        be used to create a formal significance measure - that would be equivalent to using the <br>
+                        same data twice, which is not permitted in formal inference. A comprehensive review of<br>
+                         the missing data problem can be found in Chapter 7.</p>
+                        <p class="a"> &nbsp;&nbsp; &nbsp;&nbsp;The method of imputing missing values has a nice formalization in the Expectation <br>
+                            Maximization (EM) method.This method is used to create values for missing data items<br>
+                             by using a parameterized statistical model of the data. In the first step, the non-missing
+                         </p>
+
+        <hr><hr>
+       
+
+
+
+<p class="a">data is used to create an approximation of the parameters. Then the missing data values <br>are defined (given imputed values) to give highest probability to the imputed data matrix.<br> We can then refine the parameter estimates by maximization of probability over param-<br> eters with the now imputed data, then over the missing data, etc., until convergence<br> results. This method is recommended for use in many situations, despite the fact that it<br> is not strictly Bayesian and it violates the principle of not creating significance from<br> guessed (imputed) values. The most spectacular use of the EM algorithm is for automatic<br> (unsupervised) classification in the AUTOCLASS model (see next subsection).</p>
+
+<p style="font-size: 16px;"><b>Segmentation - Latent Variables</b>
+</p>
+
+<p class="a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Segmentation and latent variable analysis aims at describing the data set as a <br>collection of subsets, each having simpler descriptions than the full data matrix.<br> The related technique of cluster analysis, although not described here, can also be given a <br>Bayesian interpretation as an effort to describe a data set as a collection of clusters with<br> small variation around the center of each cluster. Suppose data set D is partitioned into<br>
+ 
+    d classes{ D (i)}, and each of these  has a high posterior probability p(D (i) |M i) wrt<br>
+     
+    some model set Mi . Then we think that the classification is a good model for the data.<br> However, some problems remain to consider. First, what is it that we compare the<br> classification against, and second, how do we accomplish the partitioning of the data<br> cases into classes? The first question is the simplest to answer: we compare a classifi-<br> cation model against some other model, based on classification or not. The second is<br> trickier, since the introduction of this section is somewhat misleading. The prior<br> information for a model based on classification must have some information about<br> classes, but it does not have an explicit division of the data into classes available. Indeed,<br> if we were allowed to make this division into classes on our own, seeking the highest <br>posterior class model probabilities, we would probably over-fit by using the same data<br> twice — once for class assignment and once for posterior model probability computation.<br> The statistical model generating segmented data could be the following: a case is first <br>assigned to a class by a discrete distribution obtained from a suitable uninformative <br>Dirichlet distribution, and then its visible attributes are assigned by a class-dependent <br>distribution. This model can be used to compute a probability of the data matrix, and then,<br> via Bayes’ rule, a Bayes factor relating the model with another one, e.g., one without<br> classes or with a different number of classes. One can also have a variable number of<br> classes and evaluate by finding the posterior distribution of the number of<br> classes. The data probability is obtained by integrating, over the Dirichlet distribution, the sum over <br>all assignments of cases to classes, of the assignment probability times the product of <br>all resulting case probabilities according to the respective class model. Needless to say,<br> this integration is feasible only for a handful of cases where the data is too meager to <br>permit any kind of significant conclusion on the number of classes and their distributions.<br> The most well-known procedures for automatic classification are built on expectation<br> maximization. With this technique, a set of class parameters are refined by assigning<br>cases to classes probabilistically, with the probability of each case membership deter-<br> mined by the likelihood vector for it in the current class parameters (Cheeseman & Stutz, 1995).,<br> After this likelihood computation, a number of cases are moved to new classes to<br> which they belong with high likelihood. This procedure converges to a local maximum,<br>
+     
+</p>
+        <br><br>
+       
+
+        <hr><hr>
+       
+        <p class="a">where each case with highest likelihood belongs to its current class. But there are many<br>
+            local maxima, and the procedure must be repeated a number of times with different starting<br>
+            configurations.</p><br>
+    <p style="font-size: 16px;"><b>Basic Classification</b></p>
+    <p class="a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We assume that rows are generated as a finite mixture with a uniform Dirichlet prior<br>
+        for the component (class) probabilities, and each mixture component has its rows<br>
+        generated independently, according to a discrete distribution also with a uniform<br>
+        Dirichet prior for each column and class. Assume that the number of classes <i>C</i> is given,</p>
+    <p class="a">the number of rows is <i>n</i> and the number of columns is<i> K</i>, and that there are dk different</p>
+        <p class="a">values that can occur in column<i> k</i>. For a given classification, the data probability can be</p>
+        <p class="a">computed; let <i>ni (c,k)</i> be the number of occurrences of value <i>i</i> in column k of rows</p>
+        <p class="a"><i>k</i>. Let <i>ni (c)</i> be the number of occurences in class<i> c</i> of the row <i>i</i>, and <i>n(c)</i> the number of<br>
+            rows of class <i>c</i>. By equation (3) the probability of the class assignment depends only<br>
+            on the number of classes and the table size,<i> Γ(n+1)Γ(C)/Γ(n+ C)</i>. The probability<br>
+            of the data in class<i> c</i> is, if<i> i = (i1,...,iK )</i>:</p>
+        <img src="MicrosoftTeams-image.png">
+        <p class="a">The right side integral can be evaluated using the normalization constant of the<br>
+            Dirichlet distribution, giving the total data probability of a classification:</p>
+        <img src="MicrosoftTeams-image (1).png">
+        <p class="a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The posterior class assignment distribution is obtained normalizing over all class<br>
+            assignments. This distribution is intractable, but can be approximated by searching for<br>
+            a number of local maxima and estimating the weight of the neighborhood of each<br>
+            maximum. Here the EM algorithm is competitive to MCMC calculations in many cases,<br>
+            because of the difficulty of tuning the proposal distribution of MCMC computations to<br>
+            avoid getting stuck in local minima. The procedure is to randomly assign a few cases to</p>
+        <p class="a">classes, estimate parameters <i>xi (c,k)</i>, assign remaining cases to optimum classes, recom-</p>
+        <p class="a">puting the distribution of each case over classes, reclassifying each case to optimum<br>
+            class, and repeating until convergence. After repeating this procedure for a while, one<br>
+            typically finds a single, most probable class assignment for each number of classes. The<br>
+            set of local optima so obtained can be used to guide a MCMC simulation giving more<br>
+            precise estimates of the probabilities of the classifications possible. But in practice, a set</p>
+        
+        
+
+            <hr><hr>
+
+   
+     <p class="a">of high-probability classifications is normally a starting point for application specialists<br>
+        trying to give application meaning to the classes obtained.</p>
+    <p style="font-size: 16px; padding-left: 12%;"  ><b>CASE 1: PERSONALIZED MEDIA<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DISTRIBUTION</b></p>
+    <p class="a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The application concerns personalized presentation of news items. A related area<br>
+        is recommendation systems (Kumar, Raghavan, Rajagopalan, & Tomkins 2001). The data<br>
+        used are historical records of individual subscribers to an electronic news service. The<br>
+        purpose of the investigation is to design a presentation strategy where an individual is<br>
+        first treated as the “average customer,” then as his record increases, he can be included<br>
+        in one of a set of “customer types,” and finally he can also get a profile of his own. Only<br>
+        two basic mechanisms are available for evaluating an individual’s interest in an item: to<br>
+        which degree has he been interested in similar items before, and to which degree have<br>
+        similar individuals been interested in this item? This suggests two applications of the<br>
+        material of this chapter: segmentation or classification of customers into types, and<br>
+        evaluating a customer record against a number of types to find out whether or not he can<br>
+        confidently be said to differ. We will address these problems here, and we will leave out<br>
+        many practical issues in the implementation.</p>
+    <p class="a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The data base consists of a set of news items with coarse classification; a set of<br>
+        customers, each with a type, a “profile” and a list of rejected and accepted items; and a<br>
+        set of customer types, each with a list of members. Initially, we have no types or profiles,<br>
+        but only classified news items and the different individuals’ access records. The<br>
+        production of customer types is a fairly manual procedure; even if many automatic<br>
+        classification programs can make a reasonable initial guess, it is inevitable that the type<br>
+        list will be scrutinized and modified by media professionals — the types are normally also<br>
+        used for direct marketing</p>
+    <p class="a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The assignment of new individuals to types cannot be done manually because of<br>
+        the large volumes. Our task is thus to say, for a new individual with a given access list,<br>
+        to which type he belongs. The input to this problem is a set of tables, containing for each<br>
+        type as well as for the new individual, the number of rejected and accepted offers of items<br>
+        from each class. The modeling assumptionrequired is that for each news category, there<br>
+        is a probability of accepting the item for the new individual or for an average member of<br>
+        a type. Our question is now do these data support the conclusion that the individual has<br>
+        the same probability table as one of the types, or is he different from every type (and thus<br>
+        should get a profile of his own)? We can formulate the model choice problem by a<br>
+        transformation of the access tables to a dependency problem for data tables that we have</p>
+    <p class="a">already treated in depth. For a type t with ai accepts and ri rejects for a news category</p>
+    <p class="a"><i>i</i>, we imagine a table with three columns and <i>∑(ai + ri)</i> rows: a t in Column 1 to indicate</p>
+    <p class="a">an access of the type, the category number i in Column 2 of ai + ri rows, ai of which</p>
+    <p class="a">contain 1 (for accept) and ri a 0 (for reject) in Column 3. We add a similar set of rows for<br>
+        the access list of the individual, marked with 0 in Column 1. If the probability of a 0 (or</p><br>
+    
+        <hr><hr>
+
+        
+        <p class="a">1) in Column 3 depends on the category (Column 2) but not on Column 1, then the user<br>
+             cannot be distinguished from the type. But Columns 1 and 2 may be dependent if the user<br>
+              has seen a different mixture of news categories compared to the type. In graphical <br>
+              modeling terms, we could use the model choice algorithm. The probability of the customer<br>
+               belonging to type t is thus equal to the probability of model M4 against M3, where<br>
+                variable C in Figure 2 corresponds to the category variable (Column 2). In a prototype<br>
+                 implementation we have the following customer types described by their accept prob- <br>
+                 abilities:</p>
+                 
+                    <h5 align="left"><i>Table 2: Customer types in a recommender system</i></h5>
+                    <table class="b"  border="2" cellpadding="7" cellspacing="7">
+                        <th>category</th><th>Typ1</th><th>Typ2</th><th>Typ3</th><th>Typ4</th>
+                        <tr><td>News-int</td><td>0.9</td><td>0.06</td><td>0.82</td><td>0.23</td></tr>
+                        <tr><td>News-loc</td><td>0.88</td><td>0.81</td><td>0.34</td><td>0.11</td></tr>
+                        <tr><td>Sports-int</td><td>0.16</td><td>0</td><td>0.28</td><td>0.23</td></tr>
+                        <tr><td>Sports-loc</td><td>0.09</td><td>0.06</td><td>0.17</td><td>0.21</td></tr>
+                        <tr><td>Cult-int</td><td>0.67</td><td>0.24</td><td>0.47</td><td>0.27</td></tr>
+                        <tr><td>Cult-loc</td><td>0.26</td><td>0.7</td><td>0.12</td><td>0.26</td></tr>
+                        <tr><td>Tourism-int</td><td>0.08</td><td>0.2</td><td>0.11</td><td>0.11</td></tr>
+                        <tr><td>Tourism-loc</td><td>0.08</td><td>0.14</td><td>0.2</td><td>0.13</td></tr>
+                        <tr><td>Entertainment</td><td>0.2</td><td>0.25</td><td>0.74</td><td>0.28</td></tr>
+                    </table>
+              <p class="a">Three new customers have arrived, with the following access records of presented <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (accepted) offers:</p>
+                    <h5 align="left"><i>Table 3: Individual’s access records</i></h5>
+
+                    <table class="b" border="2" cellpadding="7" cellspacing="7">
+                        <th>category</th><th>Ind1</th><th>Ind2</th><th>Ind33</th>
+                        <tr><td>News-int</td><td>3(3)</td><td>32(25)</td><td>17(8)</td></tr>
+                        <tr><td>News-loc</td><td>1(1)</td><td>18(9)</td><td>25(14)</td></tr>
+                        <tr><td>Sports-int</td><td>1(1)</td><td>7(2)</td><td>7(3)</td></tr>
+                        <tr><td>Sports-loc</td><td>0(0)</td><td>5(5)</td><td>6(1)</td></tr>
+                        <tr><td>Cult-int</td><td>2(2)</td><td>11(4)</td><td>14(6)</td></tr>
+                        <tr><td>Cult-loc</td><td>1(1)</td><td>6(2)</td><td>10(3)</td></tr>
+                        <tr><td>Tourism-int</td><td>0(0)</td><td>4(4)</td><td>8(8)</td></tr>
+                        <tr><td>Tourism-loc</td><td>1(1)</td><td>5(1)</td><td>8(3)</td></tr>
+                        <tr><td>Entertainment</td><td>1(1)</td><td>17(13)</td><td>15(6)</td></tr>
+                    </table>
+                    <p class="a">The results in our example, if the types are defined by a sample of 100 items of each<br>
+                        &nbsp;&nbsp;&nbsp;    category, are:</p>
+
+                   <h5 align="left"><i>Table 4: Probabilities of assignments of types to customers</i></h5></h5> 
+                   <table class="b" border="2" cellpadding="12" cellspacing="16" style="padding-left: 5%;">
+                            <th></th><th>Typ1</th><th>Typ2</th><th>Typ3</th><th>Typ4</th>
+                          <tr><td>Ind1</td><td>0.2500</td><td>0.2500</td><td>0.2500</td><td>0.2500</td></tr>
+                            <tr><td>Ind2</td><td>0.0000</td><td>0.0000</td><td>1.0000</td><td>0.0000</td></tr>
+                          <tr><td>Ind3</td><td>0.0000</td><td>0.0001</td><td>0.9854</td><td>.0145</td></tr>
+                            
+        </body>
+        <style>
+            body{
+                padding-left: 30%;
+            }
+            .b{
+               border-color: black;
+                width: 70%;
+                
+            }
+      
+        </style>
+</html>
